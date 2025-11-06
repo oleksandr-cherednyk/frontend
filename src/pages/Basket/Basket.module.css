@@ -1,0 +1,213 @@
+/* ===== Layout ===== */
+.wrap {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 1rem;
+}
+
+/* Плашка пустой корзины */
+.empty {
+  color: #8B8B8B;
+  font-size: clamp(1.125rem, 1.2vw + 0.5rem, 1.5rem);
+  font-weight: 500;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 2.5vw + 1rem, 4rem);
+  font-weight: 700;
+}
+
+.grid {
+  align-items: start;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1.5fr minmax(300px, 420px);
+}
+
+.top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.line {
+  background-color: #DDDDDD;
+  flex: 1;
+  height: 1px;
+  margin-left: 2rem;
+}
+
+/* ===== List ===== */
+.list {
+  display: grid;
+  gap: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Item card ===== */
+.item {
+  align-items: center;
+  border: 1px solid #DDDDDD;
+  border-radius: 12px;
+  display: flex;
+  gap: 2rem;
+  padding-right: 1rem;
+}
+
+.image {
+  height: clamp(120px, 14vw, 180px);
+  object-fit: cover;
+  width: clamp(140px, 16vw, 200px);
+}
+
+.bodyItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;   
+  width: 100%;
+}
+
+.rowTop {
+  align-items: start;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  min-width: 0;  
+}
+
+.title {
+  flex: 1;
+  font-size: clamp(1rem, 0.6vw + 0.8rem, 1.2em);
+  font-weight: 500;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ===== Qty + Price row ===== */
+.controlsPrice {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Qty box */
+.qtyBox {
+  align-items: center;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 2rem);
+}
+
+.qtyBtn {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  font-size: clamp(16px, 1.2vw + 12px, 18px);
+  height: clamp(44px, 5vw, 58px);
+  justify-content: center;
+  line-height: 1;
+  margin: -1px;               /* «слипаем» бордера с контейнером */
+  width: clamp(44px, 5vw, 58px);
+}
+
+.qtyBtn:hover {
+  border-color: #aaa;
+}
+
+.qty {
+  font-size: clamp(18px, 1.2vw + 12px, 20px);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Price */
+.priceBox {
+  align-items: baseline;
+  display: flex;
+  gap: 1rem;
+}
+
+.newPrice {
+  font-size: clamp(28px, 3vw + 8px, 40px);
+  font-weight: 600;
+}
+
+.oldPrice {
+  color: #8b8b8b;
+  font-size: clamp(16px, 1.2vw + 8px, 20px);
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+/* ===== Summary card ===== */
+.summaryCard {
+  background: #f3f5f7;
+  border: 1px solid #e3e5ea;
+  border-radius: 12px;
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  position: sticky;
+  top: 12px;
+}
+
+.sumTitle {
+  font-size: clamp(0.9rem, 3vw + 0.2rem, 40px);
+  font-weight: 700;
+}
+
+
+.sumRow,
+.sumRowBig {
+  align-items: baseline;
+  color: #8B8B8B;
+  display: flex;
+  font-size: clamp(1rem, 2.2vw + 0.25rem, 40px);
+  font-weight: 400;
+  justify-content: space-between;
+}
+
+.sumRowBig {
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.sumTotal {
+  color: #282828;
+  font-size: clamp(2rem, 2vw + 0.9rem, 70px);
+  font-weight: 700;
+}
+
+.close {
+  padding: 4px;                /* компактная зона нажатия */
+  border: none;                /* убираем рамку */
+  background: transparent;     /* фон прозрачный */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  /* выравнивание для квадратных изображений в item */
+  line-height: 0;
+  border-radius: 50%;          /* делаем круглой */
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: 1fr; /* перенос на одну колонку */
+  }
+}

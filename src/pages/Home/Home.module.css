@@ -1,0 +1,112 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 2.2rem;
+}
+
+.hero {
+  padding: 5rem 2.5rem;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: -2.2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../../assets/bg-image.jpg") center/cover no-repeat;
+  transform: scaleX(-1);
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.heroContent h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.checkOutBtn {
+  width: max-content;
+  padding: 0.7rem 2rem;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(13, 80, 255, 1);
+  border-radius: 6px;
+}
+
+.sectionCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line {
+  margin-left: 2rem;
+  height: 1px;
+  background-color: #DDDDDD;
+  flex: 1;
+}
+
+.discountBanner {
+  padding: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
+  background-color: #2451C6;
+  background-image: url("../../assets/bg-image-2.png");
+  background-repeat: no-repeat;
+  background-position: left calc(100% + 2em);
+  background-size: contain;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.inner {
+  margin-top: 56px;
+  display: flex;
+  justify-content: end;
+}
+
+
+.formSide {
+  width: 516px;
+  max-width: 516px;
+  z-index: 1;
+}
+
+.sectionSale {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
