@@ -16,7 +16,7 @@ export default function AppRouter() {
       <Route path="/products" element={<Products />} />
       <Route path="/products/:id" element={<Product />} />
       <Route path="/sales" element={<Sales />} />
-      <Route path="/addproduct" element={<AddProduct />} />
+      {/* <Route path="/addproduct" element={<AddProduct />} /> */}
       <Route path="/basket" element={<Basket />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

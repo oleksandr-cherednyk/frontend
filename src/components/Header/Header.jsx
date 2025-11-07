@@ -12,7 +12,7 @@ export default function Header() {
     { title: "Categories", path: "/categories" },
     { title: "Products", path: "/products" },
     { title: "Sales", path: "/sales" },
-    { title: "Add product", path: "/addproduct" },
+    // { title: "Add product", path: "/addproduct" },
   ];
     const basketCount = useSelector(selectCount);
 

@@ -5,7 +5,7 @@ export const store = configureStore({
   reducer: { cart: cartReducer },
 });
 
-// persist в LS
+
 store.subscribe(() => {
   try {
     const state = store.getState();
